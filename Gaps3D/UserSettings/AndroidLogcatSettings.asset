@@ -1,38 +1,13 @@
 {
-    "m_SelectedDeviceId": "R58NB20L65Y",
+    "m_SelectedDeviceId": "",
     "m_SelectedPackage": {
-        "deviceId": "R58NB20L65Y",
-        "name": "com.DefaultCompany.Gaps3D",
-        "processId": 2249,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "R58NB20L65Y",
-            "name": "com.DefaultCompany.Gaps3D",
-            "processId": 20703,
-            "exited": false
-        },
-        {
-            "deviceId": "R58NB20L65Y",
-            "name": "com.DefaultCompany.Gaps3D",
-            "processId": 9158,
-            "exited": false
-        },
-        {
-            "deviceId": "R58NB20L65Y",
-            "name": "com.DefaultCompany.Gaps3D",
-            "processId": 7088,
-            "exited": false
-        },
-        {
-            "deviceId": "R58NB20L65Y",
-            "name": "com.DefaultCompany.Gaps3D",
-            "processId": 2249,
-            "exited": false
-        }
-    ],
+    "m_KnownPackagesForSerialization": [],
     "m_Tags": {
         "m_Entries": [
             {
