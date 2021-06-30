@@ -57,14 +57,14 @@ public class DragGap13 : MonoBehaviour
 	private IEnumerator ProcessWin()
 	{
 		yield return new WaitForSeconds(1);
-		SceneManager.LoadScene(5);
+		SceneManager.LoadScene(7);
 	}
 	
 	private bool AreObjectsClose(Vector3 gap, Vector3 position)	
 	{
-		return Math.Abs(position.x - gap.x) < 1
-			&& Math.Abs(position.y - gap.y) < 1
-			&& Math.Abs(position.z - gap.z) < 1;
+		return Math.Abs(position.x - gap.x) < 1.15f
+			&& Math.Abs(position.y - gap.y) < 1.15f
+			&& Math.Abs(position.z - gap.z) < 1.15f;
 	}
 	
 	private bool AreObjectsInSamePosition(Vector3 gap, Vector3 position)	

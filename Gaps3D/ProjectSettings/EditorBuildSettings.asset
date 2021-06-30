@@ -7,14 +7,74 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: 5051b1ded38d11146bbb878569311c26
+    guid: 3bfccd10623d8d0469e9d8ef9ec2c3b2
   - enabled: 1
-    path: Assets/Scenes/LevelMenu.unity
-    guid: 8220b344676a5dc41865d98543070615
+    path: Assets/Scenes/Lvl-1-1.unity
+    guid: 6d40636229ebd274180bfe88be53b76b
   - enabled: 1
-    path: Assets/Scenes/Lvl1.unity
+    path: Assets/Scenes/WinDisplays/WinDisplay1.unity
+    guid: 12edd5d528c3cec44916f26a907a0213
+  - enabled: 1
+    path: Assets/Scenes/Lvl-1-2.unity
     guid: 6cc83314ddec7ba469e0ecaf6a4fd63c
   - enabled: 1
-    path: Assets/Scenes/Lvl2.unity
-    guid: ac428d0eaaa023546a138c6c0b0ccba9
+    path: Assets/Scenes/WinDisplays/WinDisplay2.unity
+    guid: 8dc1a1b0b5d05c940a57ca09fb8d6eef
+  - enabled: 1
+    path: Assets/Scenes/LoseDisplays/LoseDisp2.unity
+    guid: be067c6b5af0a1a42a3e211e918b6723
+  - enabled: 1
+    path: Assets/Scenes/Lvl-1-3.unity
+    guid: ee3685027a6014d449315cb8e34cd96b
+  - enabled: 1
+    path: Assets/Scenes/WinDisplays/WinDisplay3.unity
+    guid: 9e03b1f0e71afb8459d626b0d630cb99
+  - enabled: 1
+    path: Assets/Scenes/LoseDisplays/LoseDisp3.unity
+    guid: 7da2a0474465ab24087e8d0a9d682709
+  - enabled: 1
+    path: Assets/Scenes/Lvl-1-4.unity
+    guid: 7539bfd2c5b14bc4b831a26dcc90a17a
+  - enabled: 1
+    path: Assets/Scenes/WinDisplays/WinDisplay4.unity
+    guid: a5522a2090869204ebf0ab27ebe7650d
+  - enabled: 1
+    path: Assets/Scenes/LoseDisplays/LoseDisp4.unity
+    guid: 3d5ccd67e0e7e7f4aa7c47a3be9e4100
+  - enabled: 1
+    path: Assets/Scenes/Lvl-2-1.unity
+    guid: f4462e94dbedfa348981d9788748205d
+  - enabled: 1
+    path: Assets/Scenes/WinDisplays/WinDisplay5.unity
+    guid: 13408952175c41744a5807c388f9c0ee
+  - enabled: 1
+    path: Assets/Scenes/LoseDisplays/LoseDisp5.unity
+    guid: 203a59fb35edb8049b97c95c481fccf4
+  - enabled: 1
+    path: Assets/Scenes/Lvl-2-2.unity
+    guid: 5f20dd45e51322441b601f7456a5f1b6
+  - enabled: 1
+    path: Assets/Scenes/WinDisplays/WinDisplay6.unity
+    guid: 431cdd923bd3c9f4480e8e0ee3bdb90a
+  - enabled: 1
+    path: Assets/Scenes/LoseDisplays/LoseDisp6.unity
+    guid: f71f2941831b3f94f8e317838d0e07e4
+  - enabled: 1
+    path: Assets/Scenes/Lvl-2-3.unity
+    guid: 243813453f62f8f49ab7a5ae9469fe57
+  - enabled: 1
+    path: Assets/Scenes/WinDisplays/WinDisplay7.unity
+    guid: 08a14652784295141b7a50680a47ed61
+  - enabled: 1
+    path: Assets/Scenes/LoseDisplays/LoseDisp7.unity
+    guid: 349cdfa0618ce0349b718626346a9479
+  - enabled: 1
+    path: Assets/Scenes/Lvl-2-4.unity
+    guid: e554cf4c26230aa4c82d0e36dcf14f3d
+  - enabled: 1
+    path: Assets/Scenes/WinDisplays/WinDisplay8.unity
+    guid: 9f144d0fe5979e74d88419b98c726747
+  - enabled: 1
+    path: Assets/Scenes/LoseDisplays/LoseDisp8.unity
+    guid: 59b63810937b7724793cc0d5fa95b005
   m_configObjects: {}

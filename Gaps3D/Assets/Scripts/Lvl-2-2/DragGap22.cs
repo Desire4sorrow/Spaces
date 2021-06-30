@@ -28,7 +28,6 @@ public class DragGap22 : MonoBehaviour
     void OnMouseUp()
     {
 		Vector3 gap1 = GameObject.Find(_transparentPrefix + _objectName).transform.position;
-
 				
 		if (AreObjectsClose(gap1, gameObject.transform.position))
 		{
@@ -60,14 +59,14 @@ public class DragGap22 : MonoBehaviour
 	private IEnumerator ProcessWin()
 	{
 		yield return new WaitForSeconds(1);
-		SceneManager.LoadScene(8);
+		SceneManager.LoadScene(16);
 	}
 	
 	private bool AreObjectsClose(Vector3 gap, Vector3 position)	
 	{
-		return Math.Abs(position.x - gap.x) < 1
-			&& Math.Abs(position.y - gap.y) < 1
-			&& Math.Abs(position.z - gap.z) < 1;
+		return Math.Abs(position.x - gap.x) < 1.15f
+			&& Math.Abs(position.y - gap.y) < 1.15f
+			&& Math.Abs(position.z - gap.z) < 1.15f;
 	}
 
     private Vector3 GetMouseAsWorldPoint()

@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 
 public class RotationGap211 : MonoBehaviour
 {
@@ -14,52 +17,66 @@ public class RotationGap211 : MonoBehaviour
 		Left
 	}
 
-	private Vector3 resetPosition;
-	private bool isObjectMoved = false; 
-	private Position position = Position.Forward;
+	private Vector3 _resetPosition;
+	private bool _isObjectMoved = false; 
+	private Position _position = Position.Forward;
+	private Stopwatch _stopWatch = new Stopwatch();
 	
 	void OnMouseDown()
     {
-		if (!isObjectMoved)
+		_stopWatch.Reset();
+		_stopWatch.Start();
+		
+		if (!_isObjectMoved)
 		{
-			resetPosition = GameObject.Find("Gap1").transform.position;
-			isObjectMoved = true; 
+			_resetPosition = GameObject.Find("Gap1").transform.position;
+			_isObjectMoved = true; 
 		}
     }
 	
 	void OnMouseUp()
     {
-		if (AreObjectsClose(resetPosition, gameObject.transform.position))
+		_stopWatch.Stop();
+		TimeSpan ts = _stopWatch.Elapsed;
+		TimeSpan delay = new TimeSpan(1700000);
+		
+		if (ts > delay)
 		{
-			if (position == Position.Forward)
+			return;
+		}
+		
+		if (AreObjectsInSamePosition(_resetPosition, gameObject.transform.position))
+		{
+			if (_position == Position.Forward)
 			{
-				transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -0.6f);
-				position = Position.Right;
+				transform.position = new Vector3(-5, gameObject.transform.position.y, -2.8f);
+				_position = Position.Right;
 			}
-			else if (position == Position.Right)
+			else if (_position == Position.Right)
 			{
-				transform.position = new Vector3(-6, -2.15f, -0.57f);
-				position = Position.Back;
+				transform.position = new Vector3(-2.6f, gameObject.transform.position.y, -2.4f);
+				_position = Position.Back;
 			}
-			else if (position == Position.Back)
+			else if (_position == Position.Back)
 			{
-				transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -2.8f);
-				position = Position.Left;
+				transform.position = new Vector3(-2.8f, gameObject.transform.position.y, -0.55f);
+				_position = Position.Left;
 			}
-			else if (position == Position.Left)
+			else if (_position == Position.Left)
 			{
-				transform.position = new Vector3(-4, -2.2f, -2.8f);
-				position = Position.Forward;
+				transform.position = new Vector3(-5.3f, -2, -0.3f);
+				_position = Position.Forward;
 			}
+			
 			transform.Rotate(0.0f, -90.0f, 0.0f);
-			resetPosition = GameObject.Find("Gap1").transform.position;
+			_resetPosition = GameObject.Find("Gap1").transform.position;
 		}
 	}
 	
-	private bool AreObjectsClose(Vector3 gap, Vector3 position)	
+	private bool AreObjectsInSamePosition(Vector3 gap, Vector3 position)	
 	{
-		return Math.Abs(position.x - gap.x) < 0.7
-			&& Math.Abs(position.y - gap.y) < 0.7
-			&& Math.Abs(position.z - gap.z) < 0.7;
+		return Math.Abs(position.x - gap.x) < 0.05f
+			&& Math.Abs(position.y - gap.y) < 0.05f
+			&& Math.Abs(position.z - gap.z) < 0.05f;
 	}
 }
